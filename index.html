@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="date=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="format-detection" content="email=no">
+    <meta content="notranslate" name="google">
+    <meta property="og:image" content="img/sharing/logo.png">
+    <meta property="vk:image" content="img/sharing/logo.png">
+    <meta name="twitter:image:src" content="img/sharing/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#fffff">
+    <meta name="msapplication-navbutton-color" content="#000">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+    <title>Главная</title>
+</head>
+
+<body class="body">
+    <div class="container">
+        <div class="container__logo">
+            <div class="logo"><svg class="logo__img">
+                    <use xlink:href="./img/symbols.svg#logo"> </use>
+                </svg>flirtely</div><button class="btn logo__sign-btn signup-btn-js" data-id="signup">Sign Up</button>
+        </div>
+        <div class="container__status">
+            <div class="status">
+                <div class="status__restore-left-side status__restore-left-side-js"></div>
+                <div class="avatar  status__avatar status__avatar_hover status__avatar-js">
+                    <div class="avatar__img-container">
+                        <div class="avatar__img avatar__big"><img class="avatar-img-js" src="img/content/ann-hoch.jpg" alt="Ann Hoch" /></div>
+                    </div>
+                    <div class="avatar__info">
+                        <p class="avatar__name avatar__name-js ">Ann Hoch</p>
+                        <p class="avatar__social avatar__social-js">@annhoch</p>
+                    </div>
+                </div>
+                <nav class="menu">
+                    <ul>
+                        <li class="menu__gift signup-btn-js" data-id="gift"></li>
+                        <li class="menu__phone signup-btn-js" data-id="book"></li>
+                        <li class="menu__video signup-btn-js" data-id="video"></li>
+                    </ul>
+                </nav><button class="btn status__signup signup-btn-js" data-id="signup">Sign Up</button>
+                <div class="status__profile-btn status__profile-btn-js"></div>
+            </div>
+        </div>
+        <div class="container__signup-btn"><button class="btn signup-btn-js" data-id="signup">Sign Up</button></div>
+        <div class="container__sidebar-left">
+            <ul class="chat__girls"></ul>
+            <ul class="chat__bottom">
+                <li class="chat__title">Girls online</li>
+            </ul>
+        </div>
+        <div class="container__chat">
+            <div class="send-message">
+                <div class="send-message__file-btn signup-btn-js" data-id="file"></div><input class="send-message__input" type="text" placeholder="Start typing..." />
+                <div class="send-message__send-btn"></div>
+            </div>
+        </div>
+        <div class="container__sidebar-right">
+            <div class="girl">
+                <div class="girl__navigation">
+                    <div class="girl__back-btn girl__back-btn-js">Back to chat</div><button class="btn status__signup signup-btn-js" data-id="signup">Sign Up</button>
+                </div>
+                <div class="girl__photo-container">
+                    <div class="girl__photo girl__photo-js"><img class="avatar-img-js" src="img/content/ann-hoch-big-1.jpg" alt="Ann Hoch" /></div>
+                    <div class="girl__photo-count girl__photo-count-js">4 photo</div>
+                </div>
+                <div class="girl__info-container">
+                    <p class="girl__info-name girl__info-name-js">Ann Hoch</p>
+                    <p class="girl__info-status">Online</p>
+                </div>
+            </div>
+            <div class="shared">
+                <p class="shared__title">Shared media</p>
+                <p class="shared__subtitle">No shared files yet</p>
+                <div class="shared__photo">
+                    <div class="shared__photo-icon"></div>
+                </div>
+            </div>
+        </div><template id="girl-online">
+            <li class="chat__online chat-online-js" data-id="">
+                <div class="avatar avatar_small">
+                    <div class="avatar__img-container">
+                        <div class="avatar__img avatar__small"><img class="avatar-img-js" src="img/content/alicia-alexander.jpg" alt="Alicia Alexander" /></div>
+                    </div>
+                    <div class="avatar__info">
+                        <p class="avatar__name avatar__name-js avatar__name_small">Alicia Alexander</p>
+                        <p class="avatar__nomessage avatar__message-js">Send message</p>
+                    </div>
+                </div>
+            </li>
+        </template><template id="girl-chat">
+            <li class="chat__girl ">
+                <div class="avatar avatar_small">
+                    <div class="avatar__img-container">
+                        <div class="avatar__img avatar__small"><img class="avatar-img-js" src="img/content/ann-hoch.jpg" alt="Ann Hoch" /></div>
+                    </div>
+                    <div class="avatar__info">
+                        <p class="avatar__name avatar__name-js avatar__name_small">Ann Hoch</p>
+                        <p class="avatar__nomessage avatar__message-js">Send message</p>
+                    </div>
+                </div><span class="message__count message__count-js">1</span>
+            </li>
+        </template><template id="smile">
+            <div class="message__smile"> <img class="message__img message__img-js" src="img/content/smile.png" />
+                <div class="message__read">
+                    <div class="message__read-icon message__read-icon-js"></div>
+                    <p class="read__time read__time-js">15:23</p>
+                </div>
+            </div>
+        </template><template id="answer_user">
+            <div class="message__smile">
+                <div class="message__user message__user-js">Hello, No.</div>
+                <div class="message__read">
+                    <div class="message__read-icon message__read-icon-js"></div>
+                    <p class="read__time read__time-js">15:23</p>
+                </div>
+            </div>
+        </template><template id="photo">
+            <li class="modal__gallery-item swiper-slide"><img class="modal__gallery-img" src="img/content/alicia-alexander.jpg" alt="" /></li>
+        </template><template id="chat">
+            <div class="container__chat-correspondence container__chat-correspondence-js" data-chatid="">
+                <div class="start-conversation">
+                    <div class="start-conversation__img-container"><img class="start-conversation__photo start-conversation__photo-js" src="img/content/ann-hoch-big-1.jpg" alt="Ann Hoch" /></div>
+                    <div class="start-conversation__title">Start conversation with <span class="start-conversation__title-js">Ann</span> now</div>
+                    <div class="start-conversation__start-template">
+                        <div class="start-conversation-btn start-conversation__smile-btn start-conversation__smile-btn-js"> </div>
+                        <div class="start-conversation-btn start-conversation__gift-btn start-conversation__gift-btn-js" data-id="gift"></div>
+                        <div class="start-conversation-btn start-conversation__sayhi-btn start-conversation__sayhi-btn-js"></div>
+                    </div>
+                    <div class="start-conversation__sign-up">
+                        <div class="start-conversation__sign-up-title">Sign up to сontinue</div>
+                        <div class="start-conversation__form">
+                            <div class="start-conversation__placeholder-container"><input class="start-conversation__noform-input-js" type="email" placeholder=" " required="required" /><label>Email</label></div>
+                            <div class="start-conversation__btn-submit start-conversation__btn-submit-js">Sign Up</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="typing typing-js"><img class="typing__img typing__img-js" src="img/content/ann-hoch-big-1.jpg" alt="Ann Hoch" />
+                    <p class="typing__name typing__name-js">Ann</p>
+                    <p class="typing__text">is typing</p>
+                    <div class="typing__loading">
+                        <div class="circle circle_active"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+        </template><template id="answer">
+            <div class="message__answer"><img class="typing__img typing__img-js" src="img/content/ann-hoch-big-1.jpg" alt="Ann Hoch" />
+                <div class="message__answer-content">
+                    <div class="message__answer-content-js"></div>
+                    <div class="read__time-container read__time-container-js"><img class="typing__img typing__img_mobil typing__img-mobil-js" src="img/content/ann-hoch-big-1.jpg" alt="Ann Hoch" />
+                        <p class="read__time read__time-js">15:23</p>
+                    </div>
+                </div>
+            </div>
+            <div class="video-chat__container" style="display: none" data-id="video">
+                <div class="status">
+                    <div class="status__restore-left-side status__restore-left-side-js"></div>
+                    <div class="avatar  status__avatar">
+                        <div>
+                            <div class="avatar__img avatar__big"><img class="avatar-img-js" src="img/content/ann-hoch.jpg" alt="Ann Hoch" /></div>
+                        </div>
+                    </div>
+                    <p class="video-chat__message"><span class="video-chat__message-js">Ann Hoch</span> invite you to video chat</p><button class="video-chat__button video-chat__button-js">
+                        <p>Join call</p>
+                    </button><button class="btn status__signup signup-btn-js" data-id="signup">Sign Up</button>
+                    <div class="status__profile-btn status__profile-btn-js"></div>
+                </div>
+            </div>
+        </template>
+    </div>
+    <div class="modal modal-js">
+        <div class="modal__container"><button class="modal__close-button js-modal-close-button"></button>
+            <h2 class="modal__title modal__title-js">Sign up to add file</h2>
+            <form class="modal__form modal__form-js" action="#" method="post">
+                <div class="start-conversation__placeholder-container"><input class="start-conversation__input-js" type="email" placeholder=" " required="required" /><label>Email</label></div><button class="modal__sign-button" type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+    <div class="modal modal_mobil modal-gallery-js">
+        <div class="girl__navigation">
+            <div class="girl__back-btn girl__gallery-back-btn-js">Back to profile</div><button class="btn status__signup signup-btn-js" data-id="signup">Sign Up</button>
+        </div>
+        <div class="modal__gallery swiper"> <button class="modal__close-button modal__close-button_gallery js-modal-close-button"></button>
+            <ul class="modal__gallery-list modal__gallery-list-js swiper-wrapper"></ul>
+            <div class="modal__navigation-gallery">
+                <div class="modal__navigation-btn modal__left-btn-js"> <svg class="modal__arrow">
+                        <use xlink:href="./img/symbols.svg#arrow"> </use>
+                    </svg></div>
+                <div class="modal__navigation-btn modal__navigation-btn_right modal__right-btn-js"><svg class="modal__arrow">
+                        <use xlink:href="./img/symbols.svg#arrow"> </use>
+                    </svg></div>
+            </div>
+        </div>
+    </div><script src="js/custom.js"></script>
+</body>
+
+</html>
