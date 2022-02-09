@@ -943,6 +943,7 @@ template {
 }
 
 .send-message {
+    z-index: 22;
     display: -ms-flexbox;
     display: flex;
     padding: 16px 12px;
@@ -1252,6 +1253,10 @@ template {
     align-items: center;
 }
 
+.avatar_hidden {
+    display: none;
+}
+
 .avatar_small {
     -ms-flex-align: start;
     align-items: flex-start;
@@ -1431,6 +1436,7 @@ template {
 }
 
 .container__status {
+    display: none;
     padding: 12px;
     grid-area: status;
     border-bottom: 1px solid #eeeeee;
@@ -1480,7 +1486,9 @@ template {
 }
 
 .container__sidebar-left {
-    display: none;
+    height: 100%;
+    display: -ms-flexbox;
+    display: flex;
     -ms-flex-direction: column;
         flex-direction: column;
     -ms-flex-pack: justify;
@@ -1524,8 +1532,7 @@ template {
 
 .container__chat {
     position: relative;
-    display: -ms-flexbox;
-    display: flex;
+    display: none;
     -ms-flex-direction: column;
         flex-direction: column;
     background-color: #f4f8f9;
@@ -1854,7 +1861,7 @@ template {
     left: 0;
     z-index: -1;
     width: 100%;
-    height: 100%;
+    height: calc(100% - 88px);
     transition: 0.5s;
     padding: 12px;
 }
@@ -1912,7 +1919,7 @@ template {
     display: none;
     position: absolute;
     left: 20px;
-    bottom: 100px;
+    bottom: 10px;
     -ms-flex-align: end;
     align-items: flex-end;
 }
@@ -2081,6 +2088,12 @@ template {
     margin: 0 20px;
 }
 
+.start-conversation__sign-up_message {
+    width: 100%;
+    margin: 0;
+    margin-top: 24px;
+}
+
 .start-conversation__sign-up-title {
     margin: 0;
     font-family: Montserrat;
@@ -2173,6 +2186,11 @@ template {
     justify-content: space-between;
     -ms-flex-direction: column;
         flex-direction: column;
+}
+
+.start-conversation__sign-up_enable {
+    display: -ms-flexbox;
+    display: flex;
 }
 
 .modal {
@@ -2514,6 +2532,7 @@ template {
     }
 
     .container__status {
+        display: block;
         padding: 20px;
     }
 
@@ -2522,18 +2541,16 @@ template {
     }
 
     .container__status_mobil .avatar {
-        display: -ms-flexbox;
-        display: flex;
+        display: none;
     }
 
-    .container__sidebar-left {
+    .container__chat {
         display: -ms-flexbox;
         display: flex;
     }
 
     .container__chat-correspondence {
         padding: 20px;
-        height: calc(100% - 88px);
     }
 
     .typing {
@@ -2662,6 +2679,19 @@ template {
         position: absolute;
         top: 0;
         left: 0;
+    }
+
+    .container_left-side-hidden .container__sidebar-left {
+        display: none;
+    }
+
+    .container_left-side-hidden .container__chat {
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    .container_left-side-hidden .container__status {
+        display: block;
     }
 }
 
