@@ -5622,150 +5622,129 @@
       name: 'Ann Hoch',
       social: '@annhoch',
       avatar: 'img/content/ann-hoch-big-1.jpg',
-      photo: ['img/content/ann-hoch-big-1.jpg', 'img/content/ann-hoch-big-2.jpg', 'img/content/ann-hoch-big-3.jpg', 'img/content/ann-hoch-big-4.jpg', 'img/content/ann-hoch-big-5.jpg']
+      photo: ['img/content/ann-hoch-big-1.jpg', 'img/content/ann-hoch-big-2.jpg', 'img/content/ann-hoch-big-3.jpg', // 'img/content/ann-hoch-big-4.jpg',
+      'img/content/ann-hoch-big-5.jpg']
     }, {
       id: 2,
       name: 'Alicia Alexander',
       social: '@aliciaalexander',
       avatar: 'img/content/alicia-alexander-big-1.jpg',
-      photo: ['img/content/alicia-alexander-big-1.jpg', 'img/content/alicia-alexander-big-2.jpg', 'img/content/alicia-alexander-big-3.jpg', 'img/content/alicia-alexander-big-4.jpg', 'img/content/alicia-alexander-big-5.jpg', 'img/content/alicia-alexander-big-6.jpg']
+      photo: ['img/content/alicia-alexander-big-1.jpg', 'img/content/alicia-alexander-big-2.jpg', 'img/content/alicia-alexander-big-3.jpg', 'img/content/alicia-alexander-big-4.jpg', 'img/content/alicia-alexander-big-5.jpg' // 'img/content/alicia-alexander-big-6.jpg',
+      ]
     }, {
       id: 3,
       name: 'Karen Taylor',
       social: '@karentaylor',
       avatar: 'img/content/karen-taylor-big-1.jpg',
-      photo: ['img/content/karen-taylor-big-1.jpg', 'img/content/karen-taylor-big-2.jpg', 'img/content/karen-taylor-big-3.jpg', 'img/content/karen-taylor-big-4.jpg', 'img/content/karen-taylor-big-5.jpg', 'img/content/karen-taylor-big-6.jpg']
-    }, {
-      id: 5,
-      name: 'Kim King',
-      social: '@kimking',
-      avatar: 'img/content/kim-king-big-1.jpg',
-      photo: ['img/content/kim-king-big-1.jpg', 'img/content/kim-king-big-2.jpg', 'img/content/kim-king-big-3.jpg', 'img/content/kim-king-big-4.jpg', 'img/content/kim-king-big-5.jpg']
+      photo: ['img/content/karen-taylor-big-1.jpg', 'img/content/karen-taylor-big-2.jpg', 'img/content/karen-taylor-big-3.jpg', 'img/content/karen-taylor-big-4.jpg', 'img/content/karen-taylor-big-5.jpg' // 'img/content/karen-taylor-big-6.jpg',
+      ]
     }, {
       id: 6,
       name: 'Ashley Hernandez',
       social: '@ashleyhernandez',
       avatar: 'img/content/ashley-hernandez-big-1.jpg',
-      photo: ['img/content/ashley-hernandez-big-1.jpg', 'img/content/ashley-hernandez-big-2.jpg', 'img/content/ashley-hernandez-big-3.jpg', 'img/content/ashley-hernandez-big-4.jpg', 'img/content/ashley-hernandez-big-5.jpg']
+      photo: ['img/content/ashley-hernandez-big-1.jpg', 'img/content/ashley-hernandez-big-2.jpg', 'img/content/ashley-hernandez-big-3.jpg', // 'img/content/ashley-hernandez-big-4.jpg',
+      'img/content/ashley-hernandez-big-5.jpg']
     }, {
       id: 7,
       name: 'Susan West',
       social: '@susanwest',
       avatar: 'img/content/susan-west-big-1.jpg',
-      photo: ['img/content/susan-west-big-1.jpg', 'img/content/susan-west-big-2.jpg', 'img/content/susan-west-big-3.jpg', 'img/content/susan-west-big-4.jpg', 'img/content/susan-west-big-5.jpg', 'img/content/susan-west-big-6.jpg']
-    }, {
-      id: 8,
-      name: 'Tiffany Padilla',
-      social: '@tiffanypadilla',
-      avatar: 'img/content/tiffany-padilla-big-1.jpg',
-      photo: ['img/content/tiffany-padilla-big-1.jpg', 'img/content/tiffany-padilla-big-2.jpg', 'img/content/tiffany-padilla-big-3.jpg', 'img/content/tiffany-padilla-big-4.jpg', 'img/content/tiffany-padilla-big-5.jpg']
+      photo: ['img/content/susan-west-big-1.jpg', 'img/content/susan-west-big-2.jpg', 'img/content/susan-west-big-3.jpg', 'img/content/susan-west-big-4.jpg', 'img/content/susan-west-big-5.jpg' // 'img/content/susan-west-big-6.jpg',
+      ]
     }, {
       id: 9,
       name: 'Barbara Griffin',
       avatar: 'img/content/barbara-griffin-big-1.jpg',
-      photo: ['img/content/barbara-griffin-big-1.jpg', 'img/content/barbara-griffin-big-2.jpg', 'img/content/barbara-griffin-big-3.jpg', 'img/content/barbara-griffin-big-4.jpg', 'img/content/barbara-griffin-big-5.jpg', 'img/content/barbara-griffin-big-6.jpg']
+      photo: ['img/content/barbara-griffin-big-1.jpg', 'img/content/barbara-griffin-big-2.jpg', 'img/content/barbara-griffin-big-3.jpg', 'img/content/barbara-griffin-big-4.jpg', 'img/content/barbara-griffin-big-5.jpg' // 'img/content/barbara-griffin-big-6.jpg',
+      ]
     }, {
       id: 10,
       name: 'Alma Taylor',
       social: '@almataylor',
       avatar: 'img/content/alma-taylor-big-1.jpg',
-      photo: ['img/content/alma-taylor-big-1.jpg', 'img/content/alma-taylor-big-2.jpg', 'img/content/alma-taylor-big-3.jpg', 'img/content/alma-taylor-big-4.jpg', 'img/content/alma-taylor-big-5.jpg']
-    }, {
-      id: 11,
-      name: 'Ann Johnson',
-      social: '@annjohnson',
-      avatar: 'img/content/alma-taylor-big-1.jpg',
-      photo: ['img/content/alma-taylor-big-1.jpg', 'img/content/alma-taylor-big-2.jpg', 'img/content/alma-taylor-big-3.jpg', 'img/content/alma-taylor-big-4.jpg', 'img/content/alma-taylor-big-5.jpg']
-    }, {
-      id: 12,
-      name: 'Helen Thompson',
-      social: '@helenthompson',
-      avatar: 'img/content/alma-taylor-big-1.jpg',
-      photo: ['img/content/alma-taylor-big-1.jpg', 'img/content/alma-taylor-big-2.jpg', 'img/content/alma-taylor-big-3.jpg', 'img/content/alma-taylor-big-4.jpg', 'img/content/alma-taylor-big-5.jpg']
+      photo: ['img/content/alma-taylor-big-1.jpg', 'img/content/alma-taylor-big-2.jpg', 'img/content/alma-taylor-big-3.jpg', // 'img/content/alma-taylor-big-4.jpg',
+      'img/content/alma-taylor-big-5.jpg']
     }, {
       id: 13,
       name: 'Willie Burke',
       social: '@willieburke',
-      avatar: 'img/content/alma-taylor-big-1.jpg',
-      photo: ['img/content/alma-taylor-big-1.jpg', 'img/content/alma-taylor-big-2.jpg', 'img/content/alma-taylor-big-3.jpg', 'img/content/alma-taylor-big-4.jpg', 'img/content/alma-taylor-big-5.jpg']
+      avatar: 'img/content/willie-burke-big-1.jpg',
+      photo: ['img/content/willie-burke-big-1.jpg', 'img/content/willie-burke-big-2.jpg', 'img/content/willie-burke-big-3.jpg' // 'img/content/alma-taylor-big-4.jpg',
+      // 'img/content/alma-taylor-big-5.jpg',
+      ]
     }, {
       id: 14,
       name: 'Stacy Williams',
       social: '@stacywilliams',
-      avatar: 'img/content/alma-taylor-big-1.jpg',
-      photo: ['img/content/alma-taylor-big-1.jpg', 'img/content/alma-taylor-big-2.jpg', 'img/content/alma-taylor-big-3.jpg', 'img/content/alma-taylor-big-4.jpg', 'img/content/alma-taylor-big-5.jpg']
+      avatar: 'img/content/stacy-williams-big-1.jpg',
+      photo: ['img/content/stacy-williams-big-1.jpg', 'img/content/stacy-williams-big-2.jpg', 'img/content/stacy-williams-big-3.jpg', 'img/content/stacy-williams-big-4.jpg']
     }, {
       id: 15,
       name: 'Sara Gordon',
       social: '@saragordon',
-      avatar: 'img/content/alma-taylor-big-1.jpg',
-      photo: ['img/content/alma-taylor-big-1.jpg', 'img/content/alma-taylor-big-2.jpg', 'img/content/alma-taylor-big-3.jpg', 'img/content/alma-taylor-big-4.jpg', 'img/content/alma-taylor-big-5.jpg']
+      avatar: 'img/content/sara-gordon-big-1.jpg',
+      photo: ['img/content/sara-gordon-big-1.jpg', 'img/content/sara-gordon-big-2.jpg', 'img/content/sara-gordon-big-3.jpg', 'img/content/sara-gordon-big-4.jpg']
     }, {
       id: 16,
       name: 'Jennifer Hernandez',
       social: '@jenniferhernandez',
-      avatar: 'img/content/alma-taylor-big-1.jpg',
-      photo: ['img/content/alma-taylor-big-1.jpg', 'img/content/alma-taylor-big-2.jpg', 'img/content/alma-taylor-big-3.jpg', 'img/content/alma-taylor-big-4.jpg', 'img/content/alma-taylor-big-5.jpg']
+      avatar: 'img/content/jennifer-hernandez-big-1.jpg',
+      photo: ['img/content/jennifer-hernandez-big-1.jpg', 'img/content/jennifer-hernandez-big-2.jpg', 'img/content/jennifer-hernandez-big-3.jpg', 'img/content/jennifer-hernandez-big-4.jpg']
     }, {
       id: 17,
       name: 'Margaret Fox',
       social: '@margaretfox',
-      avatar: 'img/content/alma-taylor-big-1.jpg',
-      photo: ['img/content/alma-taylor-big-1.jpg', 'img/content/alma-taylor-big-2.jpg', 'img/content/alma-taylor-big-3.jpg', 'img/content/alma-taylor-big-4.jpg', 'img/content/alma-taylor-big-5.jpg']
+      avatar: 'img/content/margaret-fox-big-1.jpg',
+      photo: ['img/content/margaret-fox-big-1.jpg', 'img/content/margaret-fox-big-2.jpg', 'img/content/margaret-fox-big-3.jpg', 'img/content/margaret-fox-big-4.jpg']
     }, {
       id: 18,
       name: 'Tonya Henderson',
       social: '@tonyahenderson',
-      avatar: 'img/content/alma-taylor-big-1.jpg',
-      photo: ['img/content/alma-taylor-big-1.jpg', 'img/content/alma-taylor-big-2.jpg', 'img/content/alma-taylor-big-3.jpg', 'img/content/alma-taylor-big-4.jpg', 'img/content/alma-taylor-big-5.jpg']
+      avatar: 'img/content/tonya-henderson-big-1.jpg',
+      photo: ['img/content/tonya-henderson-big-1.jpg', 'img/content/tonya-henderson-big-2.jpg', 'img/content/tonya-henderson-big-3.jpg', 'img/content/tonya-henderson-big-4.jpg']
     }, {
       id: 19,
       name: 'Esther Sparks',
       social: '@esthersparks',
-      avatar: 'img/content/alma-taylor-big-1.jpg',
-      photo: ['img/content/alma-taylor-big-1.jpg', 'img/content/alma-taylor-big-2.jpg', 'img/content/alma-taylor-big-3.jpg', 'img/content/alma-taylor-big-4.jpg', 'img/content/alma-taylor-big-5.jpg']
+      avatar: 'img/content/esther-sparks-big-1.jpg',
+      photo: ['img/content/esther-sparks-big-1.jpg', 'img/content/esther-sparks-big-2.jpg', 'img/content/esther-sparks-big-3.jpg']
     }, {
       id: 20,
       name: 'Mildred Fields',
       social: '@mildredfields',
-      avatar: 'img/content/alma-taylor-big-1.jpg',
-      photo: ['img/content/alma-taylor-big-1.jpg', 'img/content/alma-taylor-big-2.jpg', 'img/content/alma-taylor-big-3.jpg', 'img/content/alma-taylor-big-4.jpg', 'img/content/alma-taylor-big-5.jpg']
-    }, {
-      id: 21,
-      name: 'Renee Palmer',
-      social: '@reneepalmer',
-      avatar: 'img/content/alma-taylor-big-1.jpg',
-      photo: ['img/content/alma-taylor-big-1.jpg', 'img/content/alma-taylor-big-2.jpg', 'img/content/alma-taylor-big-3.jpg', 'img/content/alma-taylor-big-4.jpg', 'img/content/alma-taylor-big-5.jpg']
+      avatar: 'img/content/mildred-fields-big-1.jpg',
+      photo: ['img/content/mildred-fields-big-1.jpg', 'img/content/mildred-fields-big-2.jpg', 'img/content/mildred-fields-big-3.jpg']
     }, {
       id: 22,
       name: 'Margaret Moreno',
       social: '@margaretmoreno',
-      avatar: 'img/content/alma-taylor-big-1.jpg',
-      photo: ['img/content/alma-taylor-big-1.jpg', 'img/content/alma-taylor-big-2.jpg', 'img/content/alma-taylor-big-3.jpg', 'img/content/alma-taylor-big-4.jpg', 'img/content/alma-taylor-big-5.jpg']
+      avatar: 'img/content/margaret-moreno-big-1.jpg',
+      photo: ['img/content/margaret-moreno-big-1.jpg', 'img/content/margaret-moreno-big-2.jpg', 'img/content/margaret-moreno-big-3.jpg', 'img/content/margaret-moreno-big-4.jpg']
     }, {
       id: 24,
       name: 'Bessie Williams',
       social: '@bessiewilliams',
-      avatar: 'img/content/alma-taylor-big-1.jpg',
-      photo: ['img/content/alma-taylor-big-1.jpg', 'img/content/alma-taylor-big-2.jpg', 'img/content/alma-taylor-big-3.jpg', 'img/content/alma-taylor-big-4.jpg', 'img/content/alma-taylor-big-5.jpg']
+      avatar: 'img/content/bessie-williams-big-1.jpg',
+      photo: ['img/content/bessie-williams-big-1.jpg', 'img/content/bessie-williams-big-2.jpg', 'img/content/bessie-williams-big-3.jpg', 'img/content/bessie-williams-big-4.jpg']
     }, {
       id: 25,
       name: 'Beth Sherman',
       social: '@bethsherman',
-      avatar: 'img/content/alma-taylor-big-1.jpg',
-      photo: ['img/content/alma-taylor-big-1.jpg', 'img/content/alma-taylor-big-2.jpg', 'img/content/alma-taylor-big-3.jpg', 'img/content/alma-taylor-big-4.jpg', 'img/content/alma-taylor-big-5.jpg']
+      avatar: 'img/content/beth-sherman-big-1.jpg',
+      photo: ['img/content/beth-sherman-big-1.jpg', 'img/content/beth-sherman-big-2.jpg', 'img/content/beth-sherman-big-3.jpg', 'img/content/beth-sherman-big-4.jpg']
     }, {
       id: 26,
       name: 'Mary Collins',
       social: '@marycollins',
-      avatar: 'img/content/alma-taylor-big-1.jpg',
-      photo: ['img/content/alma-taylor-big-1.jpg', 'img/content/alma-taylor-big-2.jpg', 'img/content/alma-taylor-big-3.jpg', 'img/content/alma-taylor-big-4.jpg', 'img/content/alma-taylor-big-5.jpg']
+      avatar: 'img/content/mary-collins-big-1.jpg',
+      photo: ['img/content/mary-collins-big-1.jpg', 'img/content/mary-collins-big-2.jpg', 'img/content/mary-collins-big-3.jpg', 'img/content/mary-collins-big-4.jpg']
     }, {
       id: 28,
       name: 'Crystal Smith',
       social: '@crystalsmith',
-      avatar: 'img/content/alma-taylor-big-1.jpg',
-      photo: ['img/content/alma-taylor-big-1.jpg', 'img/content/alma-taylor-big-2.jpg', 'img/content/alma-taylor-big-3.jpg', 'img/content/alma-taylor-big-4.jpg', 'img/content/alma-taylor-big-5.jpg']
+      avatar: 'img/content/crystal-smith-big-1.jpg',
+      photo: ['img/content/crystal-smith-big-1.jpg', 'img/content/crystal-smith-big-2.jpg', 'img/content/crystal-smith-big-3.jpg']
     }];
     const answers = [['Hello 😘', 'I prefer live communication. Can we speak in a video chat?'], ['Hi 😊', "I'm just trying new lingerie now. Do you want to see? Join to the video chat."], ['Hi', "I'm here for free relationships and erotic games by webcam. Join me."], ['Hi 😊', "Let's get down to the deed. I like when somebody watches for me by webcam while I do hot sexy things."], ['Hello.', "I have a little secret! Are you ready to see it????", "Join to video chat. I have smth interesting for you baby."], ['Hi 😊', "I know  how to make your day perfect.", "Join to video chat. I will show you smth."], ['Hi.', "I would like to get to know you better)", "Join to video chat for talking."], ['Hello.', "I wonder what you are I would like to know you better)", "Do you mind?"], ['Hello.', "I will do you a favor and invite you to meet me! Has it become easy? 😉"], ['Hello mysterious stranger!', "I'll take a little of your time, and if you like me, I'll borrow some more.", "You do not mind? 😘"]];
     const girl2 = [{
@@ -5774,35 +5753,73 @@
       social: '@shirleyoliver',
       avatar: 'img/content/shirley-oliver-big-1.jpg',
       photo: ['img/content/shirley-oliver-big-1.jpg', 'img/content/shirley-oliver-big-2.jpg', 'img/content/shirley-oliver-big-3.jpg', 'img/content/shirley-oliver-big-4.jpg', 'img/content/shirley-oliver-big-5.jpg'],
-      message: [['Hello 😊', 'I write you first and would like to know if you would like to talk?)...', 'img/content/shirley-oliver-big-6.jpg'], ['If I wear this outfit. Do you like it?', 'img/content/shirley-oliver-video-1.jpg', 'video-call']]
+      message: [['Hello 😊', 'I write you first and would like to know if you would like to talk?)...', 'img/content/shirley-oliver-big-6.jpg'], ['If I wear this outfit. Do you like it?', 'img/content/shirley-oliver-video-1.gif', 'video-call']]
+    }, {
+      id: 8,
+      name: 'Tiffany Padilla',
+      social: '@tiffanypadilla',
+      avatar: 'img/content/tiffany-padilla-big-1.jpg',
+      photo: ['img/content/tiffany-padilla-big-1.jpg', 'img/content/tiffany-padilla-big-2.jpg', 'img/content/tiffany-padilla-big-3.jpg', 'img/content/tiffany-padilla-big-5.jpg'],
+      message: [[' Hello. Do you like playing some role erotic games?', 'img/content/tiffany-padilla-big-4.gif'], ['What will you choose? Bad police or cute bunny?', 'img/content/tiffany-padilla-big-6.gif', 'video-call']]
     }, {
       id: 30,
       name: 'Mary Hamilton',
       social: '@maryhamilton',
       avatar: 'img/content/mary-hamilton-big-1.jpg',
       photo: ['img/content/mary-hamilton-big-1.jpg', 'img/content/mary-hamilton-big-2.jpg', 'img/content/mary-hamilton-big-3.jpg', 'img/content/mary-hamilton-big-5.jpg'],
-      message: [['Hi, were you a bad boy as a kid?)', 'img/content/mary-hamilton-big-4.jpg'], ['Really bad?)', 'I love the bad guys. It turns me on 😈', 'img/content/mary-hamilton-video-1.jpg', 'video-call']]
+      message: [['Hi, were you a bad boy as a kid?)', 'img/content/mary-hamilton-big-4.jpg'], ['Really bad?)', 'I love the bad guys. It turns me on 😈', 'img/content/mary-hamilton-video-1.gif', 'video-call']]
     }, {
       id: 27,
       name: 'Frances Alexander',
       social: '@francesalexander',
       avatar: 'img/content/frances-alexander-big-1.jpg',
       photo: ['img/content/frances-alexander-big-1.jpg', 'img/content/frances-alexander-big-2.jpg', 'img/content/frances-alexander-big-3.jpg', 'img/content/frances-alexander-big-4.jpg', 'img/content/frances-alexander-big-5.jpg'],
-      message: [['Candles, wine... A gentle woman... Would you like that in my company?', 'img/content/frances-alexander-big-6.jpg'], ['I have a beautiful new dress and there is no reason to wear it', 'img/content/frances-alexander-video-1.jpg', 'What do you say? do you like it?', 'video-call']]
+      message: [['Candles, wine... A gentle woman... Would you like that in my company?', 'img/content/frances-alexander-big-6.jpg'], ['I have a beautiful new dress and there is no reason to wear it', 'img/content/frances-alexander-video-1.gif', 'What do you say? do you like it?', 'video-call']]
     }, {
       id: 4,
       name: 'Judy Harmon',
       social: '@judyharmon',
       avatar: 'img/content/judy-harmon-big-1.jpg',
-      photo: ['img/content/judy-harmon-big-1.jpg', 'img/content/judy-harmon-big-2.jpg', 'img/content/judy-harmon-big-3.jpg', 'img/content/judy-harmon-big-4.jpg', 'img/content/judy-harmon-big-5.jpg'],
-      message: [['Do you think all blondes silly?'], ['The mind is very sexy. But I know that men love with their eyes.', 'img/content/judy-harmon-video-1.jpg', 'Do you like my body?'], ['We can talk with you at videocall and you will see that I am not only sexy but also smart.', 'video-call']]
+      photo: ['img/content/judy-harmon-big-1.jpg', 'img/content/judy-harmon-big-2.jpg', 'img/content/judy-harmon-big-3.jpg', // 'img/content/judy-harmon-big-4.jpg',
+      'img/content/judy-harmon-big-5.jpg'],
+      message: [['Do you think all blondes silly?'], ['The mind is very sexy. But I know that men love with their eyes.', 'img/content/judy-harmon-video-1.gif', 'Do you like my body?'], ['We can talk with you at videocall and you will see that I am not only sexy but also smart.', 'video-call']]
     }, {
       id: 29,
       name: 'Anita Allen',
       social: '@anitaallen',
       avatar: 'img/content/anita-allen-big-1.jpg',
       photo: ['img/content/anita-allen-big-1.jpg', 'img/content/anita-allen-big-3.jpg', 'img/content/anita-allen-big-4.jpg'],
-      message: [['Hello. How do you prefer to start your day, with a cup of tea or coffee?...', 'img/content/anita-allen-big-2.jpg'], ['How about something sweet?', 'img/content/anita-allen-video-1.jpg', 'video-call']]
+      message: [['Hello. How do you prefer to start your day, with a cup of tea or coffee?...', 'img/content/anita-allen-big-2.jpg'], ['How about something sweet?', 'img/content/anita-allen-video-1.gif', 'video-call']]
+    }, {
+      id: 5,
+      name: 'Kim King',
+      social: '@kimking',
+      avatar: 'img/content/kim-king-big-1.jpg',
+      photo: ['img/content/kim-king-big-1.jpg', 'img/content/kim-king-big-2.jpg', 'img/content/kim-king-big-3.jpg', 'img/content/kim-king-big-5.jpg'],
+      message: [['Hello. Can I confess something to you?', 'img/content/kim-king-big-4.jpg'], ['How about something sweet?', 'img/content/kim-king-video-1.gif', 'video-call']]
+    }, {
+      id: 12,
+      name: 'Helen Thompson',
+      social: '@helenthompson',
+      avatar: 'img/content/helen-thompson-big-1.jpg',
+      photo: ['img/content/helen-thompson-big-1.jpg', 'img/content/helen-thompson-big-2.jpg', 'img/content/helen-thompson-big-3.jpg', 'img/content/helen-thompson-big-4.jpg' // 'img/content/helen-thompson-big-5.jpg',
+      ],
+      message: [['Hello. Is there a room in your house where you can sin?', 'img/content/helen-thompson-big-5.jpg'], ['I have a room for sins. I shoot erotic videos there.', 'img/content/helen-thompson-video-1.gif', 'Do you like it?', 'You can see more by joining the video chat.', 'video-call']]
+    }, {
+      id: 21,
+      name: 'Renee Palmer',
+      social: '@reneepalmer',
+      avatar: 'img/content/renee-palmer-big-1.jpg',
+      photo: ['img/content/renee-palmer-big-1.jpg', 'img/content/renee-palmer-big-2.jpg', 'img/content/renee-palmer-big-3.jpg', 'img/content/renee-palmer-big-4.jpg'],
+      message: [['Hello. Do you think a girl should dance prettily?', 'img/content/renee-palmer-big-5.jpg'], ['I can dance erotic dances and twerk. Do you like such dances?', 'img/content/renee-palmer-video-1.gif', 'video-call']]
+    }, {
+      id: 11,
+      name: 'Ann Johnson',
+      social: '@annjohnson',
+      avatar: 'img/content/ann-johnson-big-1.jpg',
+      photo: ['img/content/ann-johnson-big-1.jpg', 'img/content/ann-johnson-big-2.jpg', 'img/content/ann-johnson-big-3.jpg', 'img/content/ann-johnson-big-4.jpg' // 'img/content/alma-taylor-big-5.jpg',
+      ],
+      message: [["Hi, I'm here for a light romance on the side. Married.", 'Agree to continue erotic chat virtually?', 'img/content/ann-johnson-big-6.jpg'], ['Today I am in the mood to be a bad girl. What about you?', 'img/content/ann-johnson-video-1.gif', 'video-call']]
     }];
     const girlsRandom = shuffle(girls);
     const girlsRandomVideo = shuffle(girl2);
@@ -5826,6 +5843,7 @@
     const modalGalleryList = galleryPopup.querySelector('.modal__gallery-list');
     const profileOpenBtn = document.querySelector('.status__profile-btn-js');
     const signupBtns = document.querySelectorAll('.signup-btn-js');
+    const containerShared = document.querySelector('.shared__photo');
     let messageSum = 0;
     let countOnTheChat = 0;
     let countGirlOnline = 1;
@@ -5875,9 +5893,25 @@
 
     const removeGirlOnlineContainer = girl => girl.remove();
 
-    const chatContainerAddMessage = (message, id) => {
+    const scrollChat = id => {
       const chatActive = chatContainer.querySelector('[data-chatid = "' + id + '"]');
+      let last = chatActive.lastChild.previousSibling;
+      chatActive.querySelector(`.${last.classList[0]}`).scrollIntoView();
+    }; // Добавление сообщения в чат
+
+
+    const chatContainerAddMessage = (message, id) => {
+      // let containerScroll = document.querySelector('.container__chat-correspondence_active');
+      // let shouldScroll = containerScroll.scrollTop + containerScroll.clientHeight === containerScroll.scrollHeight;
+      const chatActive = chatContainer.querySelector('[data-chatid = "' + id + '"]'); // let defa
+
       chatActive.append(message);
+
+      if (chatActive.classList.contains('container__chat-correspondence_active')) {
+        setTimeout(() => {
+          scrollChat(id);
+        }, 0);
+      }
     }; // Случайное число от - до
 
 
@@ -5892,7 +5926,7 @@
           return el;
         }
       });
-    }; // Сообщения на нажатия смайлика
+    }; // Сообщения на нажатие смайлика
 
 
     const messageAnswer = (id, message, idx, last = false) => {
@@ -5949,13 +5983,40 @@
         element.querySelector('.start-conversation__btn-submit-js').addEventListener('click', () => formSend(id));
         chatContainerAddMessage(element, id);
       }
+    };
+
+    const sharedCheck = id => {
+      const chatActive = chatContainer.querySelector('[data-chatid = "' + id + '"]');
+
+      if (chatActive) {
+        const imgs = chatActive.querySelectorAll('.message__answer-img');
+
+        if (imgs.length == 0) {
+          const sharedImgs = containerShared.querySelectorAll('.shared__img');
+          sharedImgs.forEach(sharedImg => sharedImg.remove());
+          document.querySelector('.shared__subtitle').style.display = 'block';
+        } else {
+          document.querySelector('.shared__subtitle').style.display = 'none';
+          imgs.forEach(img => {
+            const shared = document.querySelector('#shared');
+            const sharedImg = shared.content.cloneNode(true); // sharedImg.querySelector('.shared__img').src = message;
+
+            sharedImg.querySelector('.shared__img').src = img.src;
+            containerShared.append(sharedImg);
+          });
+          document.querySelector('.shared__subtitle').style.display = 'none';
+        }
+      }
     }; // Сообщения второй девушки после нажатия смайлика
 
 
     const messageQuestion = (girl, idx = 0) => {
       const smile = document.querySelector('#answer');
+      const shared = document.querySelector('#shared');
       let chatGirl = chatGirlsContainer.querySelector('[data-id = "' + girl.id + '"]');
+      const chatActive = chatContainer.querySelector('[data-chatid = "' + girl.id + '"]');
       const element = smile.content.cloneNode(true);
+      const sharedImg = shared.content.cloneNode(true);
       const messageContainer = element.querySelector('.message__answer-content-js'); // !last && element.querySelector('.video-chat__container').remove();
 
       !lastMessage(girl.message[idx]) && element.querySelector('.video-chat__container').remove();
@@ -5977,6 +6038,13 @@
             chatGirl.querySelector('.avatar__message-js').classList.add('avatar__nomessage');
             chatGirl.querySelector('.avatar__message-js').classList.remove('avatar__message');
             chatGirl.querySelector('.avatar__message-js').textContent = 'Send a photo';
+
+            if (chatActive.classList.contains('container__chat-correspondence_active')) {
+              sharedImg.querySelector('.shared__img').src = message;
+              sharedImg.querySelector('.shared__img').alt = girl.name;
+              document.querySelector('.shared__subtitle').style.display = 'none';
+              containerShared.append(sharedImg);
+            }
           } else {
             let p = document.createElement("p");
             p.classList.add('message__answer-text');
@@ -6013,7 +6081,11 @@
 
     const startTalking = (id, mes, icon) => {
       const chatActive = chatContainer.querySelector('[data-chatid = "' + id + '"]');
-      chatActive.querySelector('.start-conversation').remove();
+
+      if (chatActive.querySelector('.start-conversation')) {
+        chatActive.querySelector('.start-conversation').remove();
+      }
+
       const smile = document.querySelector('#smile').content;
       const element = smile.cloneNode(true);
 
@@ -6086,35 +6158,40 @@
 
     sendBtn.addEventListener('click', () => {
       let id = document.querySelector('.container__chat-correspondence_active').dataset.chatid;
+      const chatActive = chatContainer.querySelector('[data-chatid = "' + id + '"]');
 
-      if (!checkFinalChat(id)) {
-        let girl = girlFindById(id, girl2);
-        let check = document.querySelector('.container__chat-correspondence_active').classList.contains('container__chat-correspondence_check-js');
-        check && questionIdx++;
-        const chatActive = chatContainer.querySelector('[data-chatid = "' + id + '"]'); // chatActive.querySelector('.start-conversation').remove();
-
-        const smile = document.querySelector('#answer_user').content;
-        const element = smile.cloneNode(true);
-        element.querySelector('.read__time-js').textContent = date.getHours() + ':' + (date.getMinutes() < 10 ? '0' : '') + date.getMinutes();
-        element.querySelector('.message__user-js').textContent = input.value;
-        changeTextChatGirl(id, true, input.value);
-        input.value = '';
-        chatContainerAddMessage(element, id); // addGirlOnTheChat(girlsRandomVideo[0], false);
-        // messageVideo(girlsRandomVideo[0]);
-
-        setTimeout(() => {
-          chatActive.querySelectorAll('.message__read-icon-js').forEach(item => item.classList.add('message__read-icon_read'));
-          setTimeout(() => {
-            chatActive.querySelector('.typing-js').classList.add('typing_active');
-            setTimeout(() => {
-              chatActive.querySelector('.typing-js').classList.remove('typing_active');
-              check ? chatContainerAddMessage(messageQuestion(girl, questionIdx), girl.id) : chatContainerAddMessage(girl.id, girl.id);
-            }, getRandomArbitrary(5, 7) * 1000);
-          }, getRandomArbitrary(1, 5) * 1000);
-        }, getRandomArbitrary(1, 3) * 1000);
+      if (chatActive.querySelector('.start-conversation')) {
+        chatActive.querySelector('.start-conversation').remove();
+        startTalking(id, `You: ${input.value}`, 'face');
+        sizeDisplay();
       } else {
-        input.value = '';
-        addFormChat(id, 'Sign up to сontinue');
+        if (!checkFinalChat(id)) {
+          let girl = girlFindById(id, girl2);
+          let check = document.querySelector('.container__chat-correspondence_active').classList.contains('container__chat-correspondence_check-js');
+          check && questionIdx++;
+          const smile = document.querySelector('#answer_user').content;
+          const element = smile.cloneNode(true);
+          element.querySelector('.read__time-js').textContent = date.getHours() + ':' + (date.getMinutes() < 10 ? '0' : '') + date.getMinutes();
+          element.querySelector('.message__user-js').textContent = input.value;
+          changeTextChatGirl(id, true, input.value);
+          input.value = '';
+          chatContainerAddMessage(element, id); // addGirlOnTheChat(girlsRandomVideo[0], false);
+          // messageVideo(girlsRandomVideo[0]);
+
+          setTimeout(() => {
+            chatActive.querySelectorAll('.message__read-icon-js').forEach(item => item.classList.add('message__read-icon_read'));
+            setTimeout(() => {
+              chatActive.querySelector('.typing-js').classList.add('typing_active');
+              setTimeout(() => {
+                chatActive.querySelector('.typing-js').classList.remove('typing_active');
+                check ? chatContainerAddMessage(messageQuestion(girl, questionIdx), girl.id) : chatContainerAddMessage(girl.id, girl.id);
+              }, getRandomArbitrary(5, 7) * 1000);
+            }, getRandomArbitrary(1, 5) * 1000);
+          }, getRandomArbitrary(1, 3) * 1000);
+        } else {
+          input.value = '';
+          addFormChat(id, 'Sign up to сontinue');
+        }
       }
     }); // Проверка на окончание чата
 
@@ -6126,9 +6203,7 @@
 
 
     const sizeDisplay = (chat = false) => {
-      console.log('fff');
       const windowInnerWidth = window.innerWidth;
-      console.log(windowInnerWidth);
 
       if (windowInnerWidth < 1090) {
         container.classList.add('container_left-side-hidden');
@@ -6210,6 +6285,7 @@
 
 
     const activeChat = id => {
+      sharedCheck(id);
       removeActiveChat(); // let girl = girlFindById(id);
 
       const girlActive = chatGirlsContainer.querySelector('[data-id = "' + id + '"]');
