@@ -5760,7 +5760,7 @@
       social: '@tiffanypadilla',
       avatar: 'img/content/tiffany-padilla-big-1.jpg',
       photo: ['img/content/tiffany-padilla-big-1.jpg', 'img/content/tiffany-padilla-big-2.jpg', 'img/content/tiffany-padilla-big-3.jpg', 'img/content/tiffany-padilla-big-5.jpg'],
-      message: [[' Hello. Do you like playing some role erotic games?', 'img/content/tiffany-padilla-big-4.gif'], ['What will you choose? Bad police or cute bunny?', 'img/content/tiffany-padilla-big-6.gif', 'video-call']]
+      message: [[' Hello. Do you like playing some role erotic games?', 'img/content/tiffany-padilla-video-1.gif'], ['What will you choose? Bad police or cute bunny?', 'img/content/tiffany-padilla-video-2.gif', 'video-call']]
     }, {
       id: 30,
       name: 'Mary Hamilton',
@@ -6031,10 +6031,21 @@
           element.querySelector('.video-chat__button-js').addEventListener('click', () => addFormChat(girl.id, 'Sign up to make video call'));
         } else {
           if (message.includes('img')) {
+            let imgContainer = document.createElement('div');
+            imgContainer.classList.add('message__answer-img-container');
             let img = document.createElement("img");
             img.classList.add('message__answer-img');
+
+            if (message.includes('video')) {
+              imgContainer.classList.add('message__answer-img_overlay');
+              imgContainer.addEventListener('click', () => addFormChat(girl.id, 'This video available only for registered users'));
+            } else {
+              imgContainer.addEventListener('click', () => addFormChat(girl.id, 'This photo available only for registered users'));
+            }
+
             img.src = message;
-            messageContainer.append(img);
+            imgContainer.append(img);
+            messageContainer.append(imgContainer);
             chatGirl.querySelector('.avatar__message-js').classList.add('avatar__nomessage');
             chatGirl.querySelector('.avatar__message-js').classList.remove('avatar__message');
             chatGirl.querySelector('.avatar__message-js').textContent = 'Send a photo';
@@ -6197,7 +6208,7 @@
 
     const checkFinalChat = id => {
       const chatActive = chatContainer.querySelector('[data-chatid = "' + id + '"]');
-      const isFinal = chatActive.querySelector('.video-chat__container');
+      const isFinal = chatActive.querySelector('.video-chat__container') || chatActive.querySelector('.start-conversation__sign-up');
       return isFinal ? true : false;
     }; // Проверяем размер экрана
 
