@@ -6470,4 +6470,12 @@
     addEventList();
     addGirlOnTheChat(girlsRandom[5], true, false);
 
+    const appHeight = () => {
+      const doc = document.documentElement;
+      doc.style.setProperty('--app-height', `${window.innerHeight}px`);
+    };
+
+    window.addEventListener('resize', appHeight);
+    appHeight();
+
 }));
