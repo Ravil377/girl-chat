@@ -5972,21 +5972,20 @@
     const addFormChat = (id, message) => {
       const containerChat = chatContainer.querySelector('[data-chatid = "' + id + '"]');
       const formChat = containerChat.querySelector('.start-conversation__sign-up');
+      formChat && formChat.remove(); // if(formChat) {
+      //     containerChat.querySelector('.start-conversation__sign-up').classList.remove('start-conversation__sign-up_active');
+      //     setTimeout(() => {
+      //         formChat.querySelector('.start-conversation__sign-up-title').textContent = message;
+      //         containerChat.querySelector('.start-conversation__sign-up').classList.add('start-conversation__sign-up_active');
+      //     }, 500);
+      // } else {
 
-      if (formChat) {
-        containerChat.querySelector('.start-conversation__sign-up').classList.remove('start-conversation__sign-up_active');
-        setTimeout(() => {
-          formChat.querySelector('.start-conversation__sign-up-title').textContent = message;
-          containerChat.querySelector('.start-conversation__sign-up').classList.add('start-conversation__sign-up_active');
-        }, 500);
-      } else {
-        const signUpForm = document.querySelector('#signup');
-        const element = signUpForm.content.cloneNode(true);
-        element.querySelector('.start-conversation__sign-up-title').textContent = message;
-        element.querySelector('.start-conversation__btn-submit-js').addEventListener('click', () => formSend(id));
-        chatContainerAddMessage(element, id);
-        containerChat.querySelector('.start-conversation__sign-up').classList.add('start-conversation__sign-up_active');
-      }
+      const signUpForm = document.querySelector('#signup');
+      const element = signUpForm.content.cloneNode(true);
+      element.querySelector('.start-conversation__sign-up-title').textContent = message;
+      element.querySelector('.start-conversation__btn-submit-js').addEventListener('click', () => formSend(id));
+      chatContainerAddMessage(element, id);
+      containerChat.querySelector('.start-conversation__sign-up').classList.add('start-conversation__sign-up_active'); // }
     };
 
     const sharedCheck = id => {

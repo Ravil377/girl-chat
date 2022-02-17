@@ -682,6 +682,7 @@ html {
 body {
     padding: 0;
     margin: 0;
+    overflow: hidden;
     width: 100vw;
     height: 100vh;
     height: var(--app-height);
@@ -2163,6 +2164,7 @@ template {
     width: 100%;
     margin: 0;
     margin-top: 24px;
+    margin-bottom: 24px;
 }
 
 .start-conversation__sign-up-title {
