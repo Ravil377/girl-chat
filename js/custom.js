@@ -5907,9 +5907,10 @@
     const chatContainerAddMessage = (message, id) => {
       const chatActive = chatContainer.querySelector('[data-chatid = "' + id + '"]');
       chatActive.append(message);
+      lazyLoadInstance.update();
       setTimeout(() => {
         scrollChat(id);
-      }, 200);
+      }, 300);
     }; // Случайное число от - до
 
 
@@ -6037,6 +6038,10 @@
           imgContainer.classList.add('message__answer-img-container');
           let img = document.createElement("img");
           img.classList.add('message__answer-img');
+          img.classList.add('lazy');
+          img.dataset.src = message;
+          img.alt = girl.name;
+          img.src = 'img/content/1x1.png';
 
           if (message.includes('video')) {
             imgContainer.classList.add('message__answer-img_overlay');
@@ -6045,7 +6050,6 @@
             imgContainer.addEventListener('click', () => addFormChat(girl.id, 'This photo available only for registered users'));
           }
 
-          img.src = message;
           imgContainer.append(img);
           messageContainer.append(imgContainer);
           chatGirl.querySelector('.avatar__message-js').classList.add('avatar__nomessage');
@@ -6525,5 +6529,8 @@
 
     window.addEventListener('resize', appHeight);
     appHeight();
+    var lazyLoadInstance = new LazyLoad({
+      elements_selector: ".message__answer-img"
+    });
 
 }));
