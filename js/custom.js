@@ -5876,16 +5876,17 @@
           return el;
         }
       });
-      if (!countOnTheChat > 3) sizeDisplay();
 
       if (countOnTheChat < 3) {
         removeGirlOnlineContainer(e.currentTarget);
         addGirlOnTheChat(girl, true, false, false, true);
         addGirlOnlineContainer(girlsRandom[countGirlOnline]);
+        sizeDisplay();
       } else if (countOnTheChat == 3) {
         removeGirlOnlineContainer(e.currentTarget);
         addGirlOnTheChat(girl, true, false, true);
         addGirlOnlineContainer(girlsRandom[countGirlOnline]);
+        sizeDisplay();
       } else if (countOnTheChat > 3) modal(e);
     }; // Удаление девушки из блока находящихся в онлайне
 
