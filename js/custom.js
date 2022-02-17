@@ -5909,7 +5909,7 @@
       chatActive.append(message);
       setTimeout(() => {
         scrollChat(id);
-      }, 20);
+      }, 100);
     }; // Случайное число от - до
 
 
