@@ -6200,7 +6200,7 @@
       let id = document.querySelector('.container__chat-correspondence_active').dataset.chatid;
       const chatActive = chatContainer.querySelector('[data-chatid = "' + id + '"]');
 
-      if (chatActive.querySelector('.start-conversation')) {
+      if (chatActive.querySelector('.start-conversation') && !checkFinalChat(id)) {
         chatActive.querySelector('.start-conversation').remove();
         startTalking(id, `You: ${input.value}`, 'face');
         sizeDisplay();
@@ -6219,9 +6219,7 @@
           element.querySelector('.message__user-js').textContent = input.value;
           changeTextChatGirl(id, true, input.value);
           input.value = '';
-          chatContainerAddMessage(element, id); // addGirlOnTheChat(girlsRandomVideo[0], false);
-          // messageVideo(girlsRandomVideo[0]);
-
+          chatContainerAddMessage(element, id);
           setTimeout(() => {
             chatActive.querySelectorAll('.message__read-icon-js').forEach(item => item.classList.add('message__read-icon_read'));
             setTimeout(() => {
