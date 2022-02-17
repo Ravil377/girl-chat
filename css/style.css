@@ -1880,6 +1880,7 @@ template {
     height: calc(100% - 88px);
     transition: 0.5s;
     padding: 12px;
+    padding-bottom: 25px;
 }
 
 .container__chat-correspondence_active {
@@ -1933,11 +1934,16 @@ template {
 
 .typing {
     display: none;
-    position: absolute;
+    position: fixed;
     left: 20px;
-    bottom: 10px;
+    bottom: 80px;
     -ms-flex-align: end;
     align-items: flex-end;
+}
+
+.container__chat-correspondence-bottom {
+    min-height: 20px;
+    width: 100%;
 }
 
 .typing_active {
@@ -2620,6 +2626,7 @@ template {
     }
 
     .typing {
+        position: absolute;
         bottom: 20px;
     }
 

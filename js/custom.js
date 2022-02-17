@@ -5895,20 +5895,21 @@
 
     const scrollChat = id => {
       const chatActive = chatContainer.querySelector('[data-chatid = "' + id + '"]');
-      let last = chatActive.lastChild.previousSibling;
-      chatActive.querySelector(`.${last.classList[0]}`).scrollIntoView();
+      chatActive.querySelector('.container__chat-correspondence-bottom-js') && chatActive.querySelector('.container__chat-correspondence-bottom-js').remove();
+      const div = document.createElement('div');
+      div.classList.add('container__chat-correspondence-bottom-js');
+      div.classList.add('container__chat-correspondence-bottom');
+      chatActive.append(div);
+      chatActive.querySelector(`.container__chat-correspondence-bottom-js`).scrollIntoView();
     }; // Добавление сообщения в чат
 
 
     const chatContainerAddMessage = (message, id) => {
       const chatActive = chatContainer.querySelector('[data-chatid = "' + id + '"]');
       chatActive.append(message);
-
-      if (chatActive.classList.contains('container__chat-correspondence_active')) {
-        setTimeout(() => {
-          scrollChat(id);
-        }, 0);
-      }
+      setTimeout(() => {
+        scrollChat(id);
+      }, 20);
     }; // Случайное число от - до
 
 
