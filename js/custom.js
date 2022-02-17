@@ -5876,7 +5876,7 @@
           return el;
         }
       });
-      sizeDisplay();
+      if (!countOnTheChat > 3) sizeDisplay();
 
       if (countOnTheChat < 3) {
         removeGirlOnlineContainer(e.currentTarget);
@@ -5886,7 +5886,7 @@
         removeGirlOnlineContainer(e.currentTarget);
         addGirlOnTheChat(girl, true, false, true);
         addGirlOnlineContainer(girlsRandom[countGirlOnline]);
-      } else if (countOnTheChat > 3) return;
+      } else if (countOnTheChat > 3) modal(e);
     }; // Удаление девушки из блока находящихся в онлайне
 
 
