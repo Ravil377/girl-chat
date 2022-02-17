@@ -5846,8 +5846,7 @@
     const containerShared = document.querySelector('.shared__photo');
     let messageSum = 0;
     let countOnTheChat = 0;
-    let countGirlOnline = 1;
-    let questionIdx = 0;
+    let countGirlOnline = 0;
     let date = new Date();
     let videoTalking = false; // Закрытие модалки
 
@@ -5872,7 +5871,7 @@
 
     const addGirlOnTheChatContainer = e => {
       const id = e.currentTarget.dataset.id;
-      const girl = girlsRandom.find(el => {
+      const girl = girlsRandomVideo.find(el => {
         if (el.id == id) {
           return el;
         }
@@ -5881,7 +5880,7 @@
 
       if (countOnTheChat < 3) {
         removeGirlOnlineContainer(e.currentTarget);
-        addGirlOnTheChat(girl, true, false);
+        addGirlOnTheChat(girl, true, false, false, true);
         addGirlOnlineContainer(girlsRandom[countGirlOnline]);
       } else if (countOnTheChat == 3) {
         removeGirlOnlineContainer(e.currentTarget);
@@ -5901,10 +5900,7 @@
 
 
     const chatContainerAddMessage = (message, id) => {
-      // let containerScroll = document.querySelector('.container__chat-correspondence_active');
-      // let shouldScroll = containerScroll.scrollTop + containerScroll.clientHeight === containerScroll.scrollHeight;
-      const chatActive = chatContainer.querySelector('[data-chatid = "' + id + '"]'); // let defa
-
+      const chatActive = chatContainer.querySelector('[data-chatid = "' + id + '"]');
       chatActive.append(message);
 
       if (chatActive.classList.contains('container__chat-correspondence_active')) {
@@ -5975,25 +5971,30 @@
       const formChat = containerChat.querySelector('.start-conversation__sign-up');
 
       if (formChat) {
-        formChat.querySelector('.start-conversation__sign-up-title').textContent = message;
+        containerChat.querySelector('.start-conversation__sign-up').classList.remove('start-conversation__sign-up_active');
+        setTimeout(() => {
+          formChat.querySelector('.start-conversation__sign-up-title').textContent = message;
+          containerChat.querySelector('.start-conversation__sign-up').classList.add('start-conversation__sign-up_active');
+        }, 500);
       } else {
         const signUpForm = document.querySelector('#signup');
         const element = signUpForm.content.cloneNode(true);
         element.querySelector('.start-conversation__sign-up-title').textContent = message;
         element.querySelector('.start-conversation__btn-submit-js').addEventListener('click', () => formSend(id));
         chatContainerAddMessage(element, id);
+        containerChat.querySelector('.start-conversation__sign-up').classList.add('start-conversation__sign-up_active');
       }
     };
 
     const sharedCheck = id => {
+      const sharedImgs = containerShared.querySelectorAll('.shared__img');
+      sharedImgs.forEach(sharedImg => sharedImg.remove());
       const chatActive = chatContainer.querySelector('[data-chatid = "' + id + '"]');
 
       if (chatActive) {
         const imgs = chatActive.querySelectorAll('.message__answer-img');
 
         if (imgs.length == 0) {
-          const sharedImgs = containerShared.querySelectorAll('.shared__img');
-          sharedImgs.forEach(sharedImg => sharedImg.remove());
           document.querySelector('.shared__subtitle').style.display = 'block';
         } else {
           document.querySelector('.shared__subtitle').style.display = 'none';
@@ -6010,7 +6011,7 @@
     }; // Сообщения второй девушки после нажатия смайлика
 
 
-    const messageQuestion = (girl, idx = 0) => {
+    const messageQuestion = (girl, message, index) => {
       const smile = document.querySelector('#answer');
       const shared = document.querySelector('#shared');
       let chatGirl = chatGirlsContainer.querySelector('[data-id = "' + girl.id + '"]');
@@ -6019,74 +6020,99 @@
       const sharedImg = shared.content.cloneNode(true);
       const messageContainer = element.querySelector('.message__answer-content-js'); // !last && element.querySelector('.video-chat__container').remove();
 
-      !lastMessage(girl.message[idx]) && element.querySelector('.video-chat__container').remove();
-      girl.message[idx].forEach(message => {
-        messageSum++;
-        chatGirl.querySelector('.message__count-js').textContent = messageSum;
+      !lastMessage(girl.message[chatActive.dataset.countMessage]) && element.querySelector('.video-chat__container').remove();
+      messageSum++;
+      chatGirl.querySelector('.message__count-js').textContent = messageSum;
 
-        if (message.includes('video-call')) {
-          element.querySelector('.video-chat__container').style.display = 'block';
-          element.querySelector('.avatar-img-js').src = girl.avatar;
-          element.querySelector('.video-chat__message-js').textContent = girl.name;
-          element.querySelector('.video-chat__button-js').addEventListener('click', () => addFormChat(girl.id, 'Sign up to make video call'));
-        } else {
-          if (message.includes('img')) {
-            let imgContainer = document.createElement('div');
-            imgContainer.classList.add('message__answer-img-container');
-            let img = document.createElement("img");
-            img.classList.add('message__answer-img');
+      if (message.includes('video-call')) {
+        element.querySelector('.video-chat__container').style.display = 'block';
+        element.querySelector('.avatar-img-js').src = girl.avatar;
+        element.querySelector('.video-chat__message-js').textContent = girl.name;
+        element.querySelector('.video-chat__button-js').addEventListener('click', () => addFormChat(girl.id, 'Sign up to make video call'));
+      } else {
+        if (message.includes('img')) {
+          let imgContainer = document.createElement('div');
+          imgContainer.classList.add('message__answer-img-container');
+          let img = document.createElement("img");
+          img.classList.add('message__answer-img');
 
-            if (message.includes('video')) {
-              imgContainer.classList.add('message__answer-img_overlay');
-              imgContainer.addEventListener('click', () => addFormChat(girl.id, 'This video available only for registered users'));
-            } else {
-              imgContainer.addEventListener('click', () => addFormChat(girl.id, 'This photo available only for registered users'));
-            }
-
-            img.src = message;
-            imgContainer.append(img);
-            messageContainer.append(imgContainer);
-            chatGirl.querySelector('.avatar__message-js').classList.add('avatar__nomessage');
-            chatGirl.querySelector('.avatar__message-js').classList.remove('avatar__message');
-            chatGirl.querySelector('.avatar__message-js').textContent = 'Send a photo';
-
-            if (chatActive.classList.contains('container__chat-correspondence_active')) {
-              sharedImg.querySelector('.shared__img').src = message;
-              sharedImg.querySelector('.shared__img').alt = girl.name;
-              document.querySelector('.shared__subtitle').style.display = 'none';
-              containerShared.append(sharedImg);
-            }
+          if (message.includes('video')) {
+            imgContainer.classList.add('message__answer-img_overlay');
+            imgContainer.addEventListener('click', () => addFormChat(girl.id, 'This video available only for registered users'));
           } else {
-            let p = document.createElement("p");
-            p.classList.add('message__answer-text');
-            p.textContent = message;
-            messageContainer.append(p);
-            chatGirl.querySelector('.avatar__message-js').classList.remove('avatar__nomessage');
-            chatGirl.querySelector('.avatar__message-js').classList.add('avatar__message');
-            chatGirl.querySelector('.avatar__message-js').textContent = message; // let mes = document.createElement("p");
-            // mes.classList.add('avatar__message');
-            // mes.textContent = message;
-            // chatGirlsContainer.querySelector('avatar__nomessage').remove();
-            // chatGirlsContainer.append(mes);
+            imgContainer.addEventListener('click', () => addFormChat(girl.id, 'This photo available only for registered users'));
           }
+
+          img.src = message;
+          imgContainer.append(img);
+          messageContainer.append(imgContainer);
+          chatGirl.querySelector('.avatar__message-js').classList.add('avatar__nomessage');
+          chatGirl.querySelector('.avatar__message-js').classList.remove('avatar__message');
+          chatGirl.querySelector('.avatar__message-js').textContent = 'Send a photo';
+
+          if (chatActive.classList.contains('container__chat-correspondence_active')) {
+            sharedImg.querySelector('.shared__img').src = message;
+            sharedImg.querySelector('.shared__img').alt = girl.name;
+            document.querySelector('.shared__subtitle').style.display = 'none';
+            containerShared.append(sharedImg);
+          }
+        } else {
+          let p = document.createElement("p");
+          p.classList.add('message__answer-text');
+          p.textContent = message;
+          messageContainer.append(p);
+          chatGirl.querySelector('.avatar__message-js').classList.remove('avatar__nomessage');
+          chatGirl.querySelector('.avatar__message-js').classList.add('avatar__message');
+          chatGirl.querySelector('.avatar__message-js').textContent = message;
         }
-      });
-      element.querySelector('.read__time-js').textContent = date.getHours() + ':' + (date.getMinutes() < 10 ? '0' : '') + date.getMinutes();
-      element.querySelector('.typing__img-js').src = girl.avatar;
-      element.querySelector('.typing__img-mobil-js').src = girl.avatar;
+      }
+
+      if (index == 0) {
+        element.querySelector('.read__time-js').textContent = date.getHours() + ':' + (date.getMinutes() < 10 ? '0' : '') + date.getMinutes();
+        element.querySelector('.typing__img-js').src = girl.avatar;
+        element.querySelector('.typing__img-mobil-js').src = girl.avatar;
+      } else {
+        element.querySelector('.message__answer').style.margin = '-10px auto 0 0';
+        chatActive.querySelectorAll('.read__time-container-js').forEach(time => time.remove());
+        element.querySelector('.typing__img-js').src = 'img/content/1x1.png';
+        element.querySelector('.read__time-js').textContent = date.getHours() + ':' + (date.getMinutes() < 10 ? '0' : '') + date.getMinutes();
+        element.querySelector('.typing__img-mobil-js').src = girl.avatar;
+      }
+
       return element;
     }; // Старт разговора с видео
 
 
-    const messageVideo = girl => {
+    const messageVideo = (girl, id, mes, icon) => {
       videoTalking = true;
       const chatActive = chatContainer.querySelector('[data-chatid = "' + girl.id + '"]');
-      chatActive.querySelector('.start-conversation').remove();
-      setTimeout(() => {
-        const chat = document.querySelector('#chat').content;
-        chat.cloneNode(true);
-        chatContainerAddMessage(messageQuestion(girl, questionIdx), girl.id);
-      }, 1000);
+      chatActive.querySelector('.start-conversation') && chatActive.querySelector('.start-conversation').remove();
+      girl.message[chatActive.dataset.countMessage].length - 1;
+
+      if (mes) {
+        const smile = document.querySelector('#smile').content;
+        const element = smile.cloneNode(true);
+
+        if (icon == 'hand') {
+          element.querySelector('.message__img-js').src = 'img/content/hand.png';
+        } else if (icon == 'face') {
+          element.querySelector('.message__img-js').src = 'img/content/sayhi.png';
+        }
+
+        element.querySelector('.read__time-js').textContent = date.getHours() + ':' + (date.getMinutes() < 10 ? '0' : '') + date.getMinutes();
+        chatContainerAddMessage(element, id);
+      }
+
+      girl.message[chatActive.dataset.countMessage].forEach((message, index) => {
+        setTimeout(() => {
+          chatActive.querySelectorAll('.message__read-icon-js').forEach(item => item.classList.add('message__read-icon_read'));
+          chatActive.querySelector('.typing-js').classList.add('typing_active');
+          setTimeout(() => {
+            chatActive.querySelector('.typing-js').classList.remove('typing_active');
+            chatContainerAddMessage(messageQuestion(girl, message, index), girl.id);
+          }, getRandomArbitrary(1, 3) * 1000);
+        }, 4000 * (index + 1));
+      }); // }, 1000)
     }; // Старт разговора после нажатия кнопки в conversation блоке
 
 
@@ -6102,26 +6128,29 @@
 
       if (icon == 'hand') {
         element.querySelector('.message__img-js').src = 'img/content/hand.png';
+      } else if (icon == 'face') {
+        element.querySelector('.message__img-js').src = 'img/content/sayhi.png';
       }
 
       element.querySelector('.read__time-js').textContent = date.getHours() + ':' + (date.getMinutes() < 10 ? '0' : '') + date.getMinutes();
       chatContainerAddMessage(element, id);
 
       if (!videoTalking) {
-        addGirlOnTheChat(girlsRandomVideo[0], false, true);
-        messageVideo(girlsRandomVideo[0]);
+        addGirlOnTheChat(girlsRandomVideo[9], false, true);
+        messageVideo(girlsRandomVideo[9]);
       }
 
       changeTextChatGirl(id, true, mes);
       setTimeout(() => {
         chatActive.querySelector('.message__read-icon-js').classList.add('message__read-icon_read');
-        setTimeout(() => {
-          chatActive.querySelector('.typing-js').classList.add('typing_active');
+        const messages = answers[getRandomArbitrary(0, answers.length)];
+        let lastMes = messages.length - 1;
+        messages.forEach((message, idx) => {
           setTimeout(() => {
-            chatActive.querySelector('.typing-js').classList.remove('typing_active');
-            const messages = answers[getRandomArbitrary(0, answers.length)];
-            let lastMes = messages.length - 1;
-            messages.forEach((message, idx) => {
+            chatActive.querySelector('.typing-js').classList.add('typing_active');
+            setTimeout(() => {
+              chatActive.querySelector('.typing-js').classList.remove('typing_active');
+
               if (idx == lastMes) {
                 changeTextChatGirl(id, false, message);
                 chatContainerAddMessage(messageAnswer(id, message, idx, true), id);
@@ -6129,9 +6158,9 @@
                 changeTextChatGirl(id, true, message);
                 chatContainerAddMessage(messageAnswer(id, message, idx), id);
               }
-            });
-          }, getRandomArbitrary(5, 7) * 1000);
-        }, 50);
+            }, getRandomArbitrary(1, 3) * 1000);
+          }, 4000 * (idx + 1));
+        });
       }, getRandomArbitrary(1, 3) * 1000);
     };
 
@@ -6179,7 +6208,11 @@
         if (!checkFinalChat(id)) {
           let girl = girlFindById(id, girl2);
           let check = document.querySelector('.container__chat-correspondence_active').classList.contains('container__chat-correspondence_check-js');
-          check && questionIdx++;
+
+          if (check) {
+            chatActive.dataset.countMessage = parseInt(chatActive.dataset.countMessage) + 1;
+          }
+
           const smile = document.querySelector('#answer_user').content;
           const element = smile.cloneNode(true);
           element.querySelector('.read__time-js').textContent = date.getHours() + ':' + (date.getMinutes() < 10 ? '0' : '') + date.getMinutes();
@@ -6195,7 +6228,7 @@
               chatActive.querySelector('.typing-js').classList.add('typing_active');
               setTimeout(() => {
                 chatActive.querySelector('.typing-js').classList.remove('typing_active');
-                check ? chatContainerAddMessage(messageQuestion(girl, questionIdx), girl.id) : chatContainerAddMessage(girl.id, girl.id);
+                check ? messageVideo(girl, girl.id) : chatContainerAddMessage(girl.id, girl.id);
               }, getRandomArbitrary(5, 7) * 1000);
             }, getRandomArbitrary(1, 5) * 1000);
           }, getRandomArbitrary(1, 3) * 1000);
@@ -6229,14 +6262,26 @@
     }; // Навешиваем слушатели на кнопки в блоке Start conversation
 
 
-    const conversationListener = (el, id) => {
+    const conversationListener = (el, id, second = false) => {
       el.querySelector('.start-conversation__smile-btn-js').addEventListener('click', () => {
-        startTalking(id, 'You: 😉', 'face');
+        !second && startTalking(id, 'You: 😉', 'face');
+
+        if (second) {
+          let girl = girlsRandomVideo.find(gi => gi.id === id);
+          messageVideo(girl, id, 'You: 😉', 'face');
+        }
+
         sizeDisplay();
       });
       el.querySelector('.start-conversation__gift-btn-js').addEventListener('click', e => modal(e));
       el.querySelector('.start-conversation__sayhi-btn-js').addEventListener('click', () => {
-        startTalking(id, 'You: 👋', 'hand');
+        !second && startTalking(id, 'You: 👋', 'hand');
+
+        if (second) {
+          let girl = girlsRandomVideo.find(gi => gi.id === id);
+          messageVideo(girl, id, 'You: 👋', 'hand');
+        }
+
         sizeDisplay();
       });
     }; // Отправка формы
@@ -6253,13 +6298,15 @@
     }; // Добавление чата
 
 
-    const addCorrespondenceContainer = (girl, check = false, third = false) => {
+    const addCorrespondenceContainer = (girl, check = false, third = false, second = false) => {
       const chat = document.querySelector('#chat').content;
       const element = chat.cloneNode(true);
+      element.querySelector('.container__chat-correspondence').dataset.countMessage = 0;
 
       if (third) {
         changeTextChatGirl(girl.id, false, '');
         element.querySelector('.start-conversation__start-template').style.display = 'none';
+        element.querySelector('.start-conversation__sign-up').classList.add('start-conversation__sign-up_active');
         element.querySelector('.start-conversation__btn-submit-js').addEventListener('click', () => formSend(girl.id));
       } else {
         element.querySelector('.start-conversation__sign-up ').style.display = "none";
@@ -6272,7 +6319,7 @@
       element.querySelector('.typing__img-js').src = girl.avatar;
       element.querySelector('.typing__name-js').textContent = girl.name.split(' ')[0]; // changeInfoSideBarRight(girl);
 
-      conversationListener(element, girl.id);
+      conversationListener(element, girl.id, second);
       chatContainer.prepend(element);
     }; // Смена данных в правом сайдбаре
 
@@ -6316,11 +6363,12 @@
     }; // Добавление в собеседеники (девушка, открыть окно чата при добавлении, счетчик не прочитанных сообщений)
 
 
-    const addGirlOnTheChat = (girl, activechat = true, countMes = false, third = false) => {
+    const addGirlOnTheChat = (girl, activechat = true, countMes = false, third = false, second = false) => {
       countOnTheChat++;
       const girlElement = document.querySelector('#girl-chat').content;
       const element = girlElement.cloneNode(true);
-      element.querySelector('.chat__girl').dataset.id = girl.id;
+      element.querySelector('.chat__girl').dataset.id = girl.id; // element.querySelector('.chat__girl').dataset.countMessage = 0;
+
       element.querySelector('.avatar__name').textContent = girl.name;
       element.querySelector('.avatar-img-js').src = girl.avatar;
 
@@ -6339,7 +6387,7 @@
 
       if (activechat) {
         changeInfoSideBarRight(girl);
-        addCorrespondenceContainer(girl, false, third);
+        addCorrespondenceContainer(girl, true, third, second);
         activeChat(girl.id);
       }
 
@@ -6466,7 +6514,7 @@
         closePopup();
       });
     });
-    girlsOnlineFilling(girlsRandom);
+    girlsOnlineFilling(girlsRandomVideo);
     addEventList();
     addGirlOnTheChat(girlsRandom[5], true, false);
 

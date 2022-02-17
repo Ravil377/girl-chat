@@ -2053,8 +2053,7 @@ template {
 
 .message__answer-img-container {
     position: relative;
-    max-width: 280px;
-    width: 100%;
+    width: 280px;
     transition: 0.5s;
     cursor: pointer;
 }
@@ -2132,6 +2131,20 @@ template {
     border-radius: 20px;
     padding: 32px 24px;
     margin: 0 20px;
+    opacity: 0;
+}
+
+.start-conversation__sign-up_active {
+    animation: opac 3s forwards;
+}
+
+@keyframes opac {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .start-conversation__sign-up_message {
